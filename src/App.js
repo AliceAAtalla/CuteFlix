@@ -10,6 +10,7 @@ import TitleCute from './components/TitleCute';
 import DescriptionCute from './components/DescriptionCute';
 import ThumbCute from './components/ThumbCute';
 import Cachorrinho from './assets/img/Chorrinho1.jpg';
+import channel1 from './assets/img/Channel.jpg';
 
 function App() {
   return (
@@ -26,8 +27,11 @@ function App() {
           <TitleCute>Tirando Selfie</TitleCute>
           <DescriptionCute>Cãozinho tirando uma selfie</DescriptionCute>
         </Text>
-        <ThumbCute src={Cachorrinho} alt="Cachorrinho tirando selfie" 
-        // avatar={}
+        <ThumbCute
+          src={Cachorrinho}
+          alt="Cachorrinho tirando selfie"
+          avatar={channel1}
+          channelName="Dogs"
         />
       </BannerCute>
       <FooterCute>

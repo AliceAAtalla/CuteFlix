@@ -2,6 +2,7 @@ import React from 'react';
 import {
   WrapperThumb, Thumb, Avatar, Background,
 } from './styles';
+import AvatarCute from '../AvatarCute';
 
 const ThumbCute = ({
   src, alt, avatar, channelName,
@@ -9,7 +10,7 @@ const ThumbCute = ({
   <Background>
     <WrapperThumb>
       <Thumb src={src} alt={alt} />
-      <Avatar src={avatar} alt={channelName} />
+      <AvatarCute photo={avatar} channelName={channelName} />
     </WrapperThumb>
   </Background>
 );

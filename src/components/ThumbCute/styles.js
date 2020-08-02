@@ -1,20 +1,10 @@
 import styled from 'styled-components';
-
-export const Avatar = styled.img`
-  position: absolute;
-  top: var(--space);
-  left: var(--space);
-  width: 50rem;
-  height: 50rem;
-  border-radius: 50%;
-  border: 1px solid var(--color-blue-dark);
-  transform: translateX(calc((100% + var(--space)) * -1));
-  opacity: 0;
-  transition: transform 200ms linear, opacity 100ms linear;
-`;
+import { Avatar, WrapperAvatar } from '../AvatarCute/styles';
+import AvatarCute from '../AvatarCute';
 
 export const Thumb = styled.img`
   width: 100%;
+  transition: filter 100ms linear;
 `;
 
 export const WrapperThumb = styled.figure`
@@ -23,6 +13,16 @@ export const WrapperThumb = styled.figure`
   width: 550px;
   overflow: hidden;
   transition: transform 100ms linear;
+
+  & > ${WrapperAvatar} {
+    position: absolute;
+    top: var(--space);
+    left: var(--space);
+    margin-right: var(--space);
+    transform: translateX(calc((100% + var(--space)) * -1));
+    opacity: 0;
+    transition: transform 200ms linear, opacity 100ms linear;
+  }
 `;
 
 export const Background = styled.div`
@@ -70,8 +70,12 @@ export const Background = styled.div`
 
     & > ${WrapperThumb} {
       transform: translate(var(--move-space), var(--move-space));
+      
+      & > ${Thumb} {
+        filter: brightness(0.6);
+      }
 
-      & > ${Avatar} {
+      & > ${WrapperAvatar} {
         transform: translateX(0);
         opacity: 1;
         transition: transform 100ms 150ms linear, opacity 300ms 150ms linear;
