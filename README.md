@@ -1,1 +1,1 @@
-# AnimaFlix
+# CuteFlix
