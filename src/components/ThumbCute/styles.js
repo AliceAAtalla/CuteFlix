@@ -5,7 +5,7 @@ export const Timer = styled.span`
   position: absolute;
   right: var(--space);
   bottom: var(--space);
-  font-size: 20rem;
+  font-size: 18rem;
   background-color: var(--color-video-3);
   padding: 2rem 4rem;
   color: var(--color-light);
