@@ -31,6 +31,7 @@ function App() {
           src={Cachorrinho}
           alt="Cachorrinho tirando selfie"
           avatar={channel1}
+          title="Cachorinho tirando uma selfie"
           channelName="Dogs"
         />
       </BannerCute>

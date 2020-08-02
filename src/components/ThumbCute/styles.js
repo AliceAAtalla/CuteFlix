@@ -1,6 +1,19 @@
 import styled from 'styled-components';
-import { Avatar, WrapperAvatar } from '../AvatarCute/styles';
-import AvatarCute from '../AvatarCute';
+import { WrapperAvatar } from '../AvatarCute/styles';
+
+export const Title = styled.figcaption`
+  position: absolute;
+  text-shadow: 2px 2px var(--color-blue-dark);
+  bottom: var(--space);
+  left: var(--space);
+  font-weight: 300;
+  font-size: 23rem;
+  color: var(--color-video-title);
+  padding: var(--border) 6rem;
+  transform: translateX(calc(100% + var(--space)));
+  opacity: 0;
+  transition: var(--transition);
+`;
 
 export const Thumb = styled.img`
   width: 100%;
@@ -9,7 +22,7 @@ export const Thumb = styled.img`
 
 export const WrapperThumb = styled.figure`
   position: relative;
-  border: var(--border) solid var(--color-video-3);
+  border: var(--border) solid var(--color-video-5);
   width: 550px;
   overflow: hidden;
   transition: transform 100ms linear;
@@ -21,16 +34,19 @@ export const WrapperThumb = styled.figure`
     margin-right: var(--space);
     transform: translateX(calc((100% + var(--space)) * -1));
     opacity: 0;
-    transition: transform 200ms linear, opacity 100ms linear;
+    transition: var(--transition)
   }
 `;
 
 export const Background = styled.div`
+  /* Variaveis */
   --border: 4rem;
   --space: 10rem;
   --border-animation: calc((var(--space) + var(--border)));
   --move-space: calc((var(--space) * -1));
-
+  --transition: transform 200ms linear, opacity 100ms linear;
+  --transition-hover: transform 350ms 200ms linear, opacity 300ms 200ms linear;
+  /* -------- */
   background-color: var(--color-video-3);
   position: relative;
 
@@ -70,15 +86,21 @@ export const Background = styled.div`
 
     & > ${WrapperThumb} {
       transform: translate(var(--move-space), var(--move-space));
-      
+
       & > ${Thumb} {
-        filter: brightness(0.6);
+        filter: brightness(0.75);
       }
 
       & > ${WrapperAvatar} {
         transform: translateX(0);
         opacity: 1;
-        transition: transform 100ms 150ms linear, opacity 300ms 150ms linear;
+        transition: var(--transition-hover);
+      }
+
+      & > ${Title} {
+        transform: translateX(0);
+        opacity: 1;
+        transition: var(--transition-hover);
       }
     }
   }

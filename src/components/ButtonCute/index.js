@@ -8,7 +8,14 @@ const ButtonCute = styled.button`
   cursor: pointer;
   font-size: 15rem;
   font-weight: 600;
-  padding: 13rem 25rem;
+  padding: 12rem 23rem;
+  transform: scale(1);
+  transition: transform 300ms linear;
+  
+  &:hover {
+    transition: transform 300ms linear;
+    transform: scale(1.1);
+  }
 `;
 
 export default ButtonCute;
