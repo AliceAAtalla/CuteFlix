@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
-const ButtonAnima = styled.button`
+const ButtonCute = styled.button`
   background-color: var(--color-red-light);
   border: 1px solid var(--color-green-blue);
   border-radius: 4px;
   color: var(--color-light);
   cursor: pointer;
-  font-size: 14rem;
+  font-size: 15rem;
   font-weight: 600;
-  padding: 15px 30px;
+  padding: 13rem 25rem;
 `;
 
-export default ButtonAnima;
+export default ButtonCute;

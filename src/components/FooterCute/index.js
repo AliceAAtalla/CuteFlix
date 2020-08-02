@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import LogoAnima from '../LogoAnima';
+import LogoCute from '../LogoCute';
 
-const FooterAnima = styled.footer`
+const FooterCute = styled.footer`
   display: flex;
   flex-direction:column;
   align-items: center;
@@ -11,9 +11,9 @@ const FooterAnima = styled.footer`
   padding: 20rem 0;
   border-top: 4px solid var(--color-red-light);
 
-  & > ${LogoAnima} {
+  & > ${LogoCute} {
     margin-bottom: 20rem;
   }
 `;
 
-export default FooterAnima;
+export default FooterCute;
