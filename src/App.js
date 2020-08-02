@@ -30,9 +30,10 @@ function App() {
         <ThumbCute
           src={Cachorrinho}
           alt="Cachorrinho tirando selfie"
+          channelName="Dogs"
           avatar={channel1}
           title="Cachorinho tirando uma selfie"
-          channelName="Dogs"
+          timer="00:20"
         />
       </BannerCute>
       <FooterCute>

@@ -1,6 +1,18 @@
 import styled from 'styled-components';
 import { WrapperAvatar } from '../AvatarCute/styles';
 
+export const Timer = styled.span`
+  position: absolute;
+  right: var(--space);
+  bottom: var(--space);
+  font-size: 20rem;
+  background-color: var(--color-video-3);
+  padding: 2rem 4rem;
+  color: var(--color-light);
+  opacity:0;
+  transition: opacity 100ms linear;
+`;
+
 export const Title = styled.figcaption`
   position: absolute;
   text-shadow: 2px 2px var(--color-blue-dark);
@@ -101,6 +113,11 @@ export const Background = styled.div`
         transform: translateX(0);
         opacity: 1;
         transition: var(--transition-hover);
+      }
+
+      & > ${Timer} {
+        opacity: 1;
+        transition: opacity 300ms 550ms linear;
       }
     }
   }
