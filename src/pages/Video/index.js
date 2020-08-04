@@ -1,14 +1,24 @@
 import React from 'react';
-import TagCute from '../../components/TagCute';
 import { HeaderCute, Wrapper } from '../../components/HeaderCute';
 import LogoCute from '../../components/LogoCute';
+import FooterCute from '../../components/FooterCute';
+import LinkAlura from '../../components/LinkAlura';
 
 const Video = () => (
-  <HeaderCute>
-    <Wrapper>
+  <>
+    <HeaderCute>
+      <Wrapper>
+        <LogoCute />
+      </Wrapper>
+    </HeaderCute>
+    <FooterCute>
       <LogoCute />
-    </Wrapper>
-  </HeaderCute>
+      <p>
+        Site Feito na #ImersãoReact da
+        <LinkAlura href="https://www.alura.com.br/"> Alura</LinkAlura>
+      </p>
+    </FooterCute>
+  </>
 );
 
 export default Video;
