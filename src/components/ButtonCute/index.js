@@ -11,7 +11,7 @@ const ButtonCute = styled.button`
   font-size: 15rem;
   font-weight: 600;
   padding: 12rem 23rem;
-  transform: scale(1);
+  transform: 200ms cubic-bezier(0, 0, 0.73, 2.24);
   transition: var(--transition-transform);
 
   &:hover {
