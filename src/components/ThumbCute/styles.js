@@ -9,7 +9,7 @@ export const Timer = styled.span`
   background-color: var(--color-video-3);
   padding: 2rem 4rem;
   color: var(--color-light);
-  opacity:0;
+  opacity: 0;
   transition: opacity 100ms linear;
 `;
 
@@ -46,7 +46,7 @@ export const WrapperThumb = styled.figure`
     margin-right: var(--space);
     transform: translateX(calc((100% + var(--space)) * -1));
     opacity: 0;
-    transition: var(--transition)
+    transition: var(--transition);
   }
 `;
 
@@ -100,7 +100,7 @@ export const Background = styled.div`
       transform: translate(var(--move-space), var(--move-space));
 
       & > ${Thumb} {
-        filter: brightness(0.75);
+        filter: brightness(0.9);
       }
 
       & > ${WrapperAvatar} {

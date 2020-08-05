@@ -3,7 +3,7 @@ import { HeaderCute, Wrapper } from './styles';
 import LogoCute from '../LogoCute';
 import ButtonCute from '../ButtonCute';
 
-function Header() {
+function HeaderLogin() {
   return (
     <HeaderCute>
       <Wrapper>
@@ -17,4 +17,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderLogin;

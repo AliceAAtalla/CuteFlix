@@ -1,6 +1,6 @@
 import React from 'react';
 import LogoCute from './components/LogoCute';
-import Header from './components/HeaderCute';
+import HeaderLogin from './components/HeaderLogin';
 import FooterCute from './components/FooterCute';
 import LinkAlura from './components/LinkAlura';
 import { BannerCute, Text } from './components/BannerCute';
@@ -14,12 +14,15 @@ import channel1 from './assets/img/Channel.jpg';
 function App() {
   return (
     <>
-      <Header />
+      <HeaderLogin />
       <BannerCute>
         <Text>
-          <TagCute>Cãozinhos</TagCute>
-          <TitleCute>Tirando Selfie</TitleCute>
-          <DescriptionCute>Cãozinho tirando uma selfie</DescriptionCute>
+          <TagCute>Animais Fofos</TagCute>
+          <TitleCute>Boas vindas a CuteFlix!</TitleCute>
+          <DescriptionCute>
+            Aqui você vai ver vários videos apaixonantes e fofos! Se derreta com Cachorinhos,
+            Gatinhos, Passarinhos, Pandas, e muitas outras fofuras!
+          </DescriptionCute>
         </Text>
         <ThumbCute
           src={Cachorrinho}
@@ -27,7 +30,7 @@ function App() {
           channelName="Dogs"
           avatar={channel1}
           title="Cachorinho tirando uma selfie"
-          timer="00:20"
+          timer="00:00"
         />
       </BannerCute>
       <FooterCute>
