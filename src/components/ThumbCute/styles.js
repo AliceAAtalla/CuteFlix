@@ -15,7 +15,7 @@ export const Timer = styled.span`
 
 export const Title = styled.figcaption`
   position: absolute;
-  text-shadow: 2px 2px var(--color-blue-dark);
+  text-shadow: 1.2px 1.2px var(--color-blue-dark);
   bottom: var(--space);
   left: var(--space);
   font-weight: 300;

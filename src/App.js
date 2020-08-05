@@ -1,8 +1,5 @@
-import React from 'react';
-import LogoCute from './components/LogoCute';
+import React, { Fragment } from 'react';
 import HeaderLogin from './components/HeaderLogin';
-import FooterCute from './components/FooterCute';
-import LinkAlura from './components/LinkAlura';
 import { BannerCute, Text } from './components/BannerCute';
 import TagCute from './components/TagCute';
 import TitleCute from './components/TitleCute';
@@ -10,6 +7,8 @@ import DescriptionCute from './components/DescriptionCute';
 import ThumbCute from './components/ThumbCute';
 import Cachorrinho from './assets/img/Chorrinho1.jpg';
 import channel1 from './assets/img/Channel.jpg';
+import Footer from './components/FooterCute';
+import SectionCute from './components/SectionCute';
 
 function App() {
   return (
@@ -26,20 +25,17 @@ function App() {
         </Text>
         <ThumbCute
           src={Cachorrinho}
-          alt="Cachorrinho tirando selfie"
-          channelName="Dogs"
+          alt="Bem vindos a CuteFlix!"
+          channelName="CuteFlix"
           avatar={channel1}
-          title="Cachorinho tirando uma selfie"
+          title="Bem vindos a CuteFlix!"
           timer="00:00"
         />
       </BannerCute>
-      <FooterCute>
-        <LogoCute />
-        <p>
-          Site Feito na #ImersãoReact da
-          <LinkAlura href="https://www.alura.com.br/"> Alura</LinkAlura>
-        </p>
-      </FooterCute>
+      <SectionCute>
+        <TagCute>Cachorrinho</TagCute>
+      </SectionCute>
+      <Footer />
     </>
   );
 }

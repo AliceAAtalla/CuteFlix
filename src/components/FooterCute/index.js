@@ -1,19 +1,16 @@
-import styled from 'styled-components';
+import React from 'react';
+import FooterCute from './styles';
 import LogoCute from '../LogoCute';
+import LinkAlura from '../LinkAlura';
 
-const FooterCute = styled.footer`
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-  background-color: var(--color-blue-light);
-  color: var(--color-blue-dark);
-  font-size: 14rem;
-  padding: 20rem 0;
-  border-top: 4px solid var(--color-red-light);
+const Footer = () => (
+  <FooterCute>
+    <LogoCute />
+    <p>
+      Site Feito na #ImersãoReact da
+      <LinkAlura href="https://www.alura.com.br/"> Alura</LinkAlura>
+    </p>
+  </FooterCute>
+);
 
-  & > ${LogoCute} {
-    margin-bottom: 20rem;
-  }
-`;
-
-export default FooterCute;
+export default Footer;

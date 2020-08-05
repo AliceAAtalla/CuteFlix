@@ -4,7 +4,7 @@ export const Channel = styled.figcaption`
   font-size: 20rem;
   margin-left: var(--space);
   color: var(--color-video-title);
-  text-shadow: 2px 2px var(--color-blue-dark);
+  text-shadow: 1.2px 1.2px var(--color-blue-dark);
 `;
 
 export const Avatar = styled.img`
@@ -17,5 +17,4 @@ export const Avatar = styled.img`
 export const WrapperAvatar = styled.figure`
   display: flex;
   align-items: center;
-
 `;

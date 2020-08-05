@@ -1,9 +1,8 @@
 import React from 'react';
-// import Header from '../../components/HeaderLogin';
+import { HeaderCute, Wrapper } from '../../components/HeaderLogin/styles';
+import LogoCute from '../../components/LogoCute';
 import FooterCute from '../../components/FooterCute';
 import LinkAlura from '../../components/LinkAlura';
-import LogoCute from '../../components/LogoCute';
-import { HeaderCute, Wrapper } from '../../components/HeaderLogin/styles';
 
 const Video = () => (
   <>
