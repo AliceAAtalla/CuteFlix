@@ -1,7 +1,6 @@
 import React from 'react';
 import LogoCute from './components/LogoCute';
-import { HeaderCute, Wrapper } from './components/HeaderCute';
-import ButtonCute from './components/ButtonCute';
+import Header from './components/HeaderCute';
 import FooterCute from './components/FooterCute';
 import LinkAlura from './components/LinkAlura';
 import { BannerCute, Text } from './components/BannerCute';
@@ -15,12 +14,7 @@ import channel1 from './assets/img/Channel.jpg';
 function App() {
   return (
     <>
-      <HeaderCute>
-        <Wrapper>
-          <LogoCute />
-          <ButtonCute>Novo Video</ButtonCute>
-        </Wrapper>
-      </HeaderCute>
+      <Header />
       <BannerCute>
         <Text>
           <TagCute>Cãozinhos</TagCute>

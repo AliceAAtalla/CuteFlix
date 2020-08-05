@@ -8,9 +8,10 @@ const ButtonCute = styled.button`
   border-radius: 4px;
   color: var(--color-light);
   cursor: pointer;
-  font-size: 15rem;
+  font-size: 14rem;
   font-weight: 600;
   padding: 12rem 23rem;
+  text-decoration: none;
   transform: 200ms cubic-bezier(0, 0, 0.73, 2.24);
   transition: var(--transition-transform);
 

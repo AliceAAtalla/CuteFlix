@@ -1,37 +1,20 @@
-import styled from 'styled-components';
-import ButtonCute from '../ButtonCute';
+import React from 'react';
+import { HeaderCute, Wrapper } from './styles';
 import LogoCute from '../LogoCute';
-import container from '../../styles/tools/container';
+import ButtonCute from '../ButtonCute';
 
-export const HeaderCute = styled.header`
-  background-color: var(--color-blue-light);
-  border-bottom: 4px solid var(--color-red-light);
-  padding: 20rem 0;
+function Header() {
+  return (
+    <HeaderCute>
+      <Wrapper>
+        <LogoCute />
 
-  @media (max-width: 800px) {
-    padding: 15rem 16rem;
-  }
-`;
+        <ButtonCute as="a" href="/video/new">
+          ENTRAR
+        </ButtonCute>
+      </Wrapper>
+    </HeaderCute>
+  );
+}
 
-export const Wrapper = styled.div`
-  ${container};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @media (max-width: 800px) {
-    justify-content: center;
-    & > ${LogoCute} {
-      height: 35rem;
-    }
-
-    & > ${ButtonCute} {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100vw;
-      border: none;
-      border-radius: 0;
-    }
-  }
-`;
+export default Header;

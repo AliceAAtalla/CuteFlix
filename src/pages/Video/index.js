@@ -1,16 +1,12 @@
 import React from 'react';
-import { HeaderCute, Wrapper } from '../../components/HeaderCute';
-import LogoCute from '../../components/LogoCute';
+import Header from '../../components/HeaderCute';
 import FooterCute from '../../components/FooterCute';
 import LinkAlura from '../../components/LinkAlura';
+import LogoCute from '../../components/LogoCute';
 
 const Video = () => (
   <>
-    <HeaderCute>
-      <Wrapper>
-        <LogoCute />
-      </Wrapper>
-    </HeaderCute>
+    <Header />
     <FooterCute>
       <LogoCute />
       <p>
