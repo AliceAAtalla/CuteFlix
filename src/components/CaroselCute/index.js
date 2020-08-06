@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react';
+import ThumbCute from '../ThumbCute';
+import {CarouselStyle, Right} from './styles';
 
 const CarouselCute = ({ videos }) => (
-  <div>
+  <CarouselStyle>
     {videos.map(({ src, alt, title, avatar, channelName, timer, link }) => (
       <ThumbCute
         src={src}
@@ -13,7 +15,8 @@ const CarouselCute = ({ videos }) => (
         link={link}
       />
     ))}
-  </div>
+  <Right />
+  </CarouselStyle>
 );
 
 export default CarouselCute;
