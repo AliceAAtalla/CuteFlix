@@ -1,6 +1,20 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { WrapperThumb, Background } from '../ThumbCute/styles';
 import arrow from '../../assets/img/arrow.svg';
+
+export const WrapperCarousel = styled.div`
+  display: flex;
+  transition: transform 200ms linear;
+
+  & > ${Background} {
+    margin-right: 25rem;
+  }
+
+  ${({ moveRight }) => moveRight
+  && css`
+      transform: translateX(calc(var(--thumb-width) * -1))
+  `}
+`;
 
 export const Right = styled.button`
   position: absolute;
@@ -28,6 +42,7 @@ export const Right = styled.button`
 
 export const CarouselStyle = styled.div`
   --space-top: 20rem;
+  --thumb-width: 400rem;
 
   position: relative;
   display: flex;
@@ -38,12 +53,8 @@ export const CarouselStyle = styled.div`
   padding: var(--space-top) 30rem;
   overflow: hidden;
 
-  & > ${Background} {
-    margin-right: 25rem;
-  }
-
   & ${WrapperThumb} {
-    width: 400rem;
+    width: var(--thumb-width);
   }
 
   &:hover > ${Right} {
