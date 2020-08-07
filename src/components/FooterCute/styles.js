@@ -9,7 +9,7 @@ const FooterCute = styled.footer`
   color: var(--color-blue-dark);
   font-size: 14rem;
   padding: 20rem 0;
-  border-top: 4px solid var(--color-red-light);
+  box-shadow: inset 0px 4px 30px 2px var(--color-green-blue);
 
   & > ${LogoCute} {
     margin-bottom: 20rem;

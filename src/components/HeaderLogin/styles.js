@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 import ButtonCute from '../ButtonCute';
 import LogoCute from '../LogoCute';
-import container from '../../styles/tools/container';
 
 export const HeaderCute = styled.header`
   background-color: var(--color-blue-light);
-  border-bottom: 4px solid var(--color-red-light);
+  box-shadow: 0 4px 4px var(--color-green-blue);
   padding: 20rem 35rem;
 
   @media (max-width: 800px) {

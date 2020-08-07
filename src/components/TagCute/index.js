@@ -4,7 +4,7 @@ const TagCute = styled.h2`
   display: inline-block;
   border-radius: 4rem;
   font-size: 25rem;
-  background-color: var(--color-video-2);
+  background-color: var(--color-green-blue);
   padding: 20rem 18rem;
   color: var(--color-light)
 `;
