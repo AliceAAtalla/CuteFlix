@@ -15,8 +15,10 @@ const CarouselCute = ({ videos }) => {
     setMove((prevState) => prevState + 1);
   };
 
+  const leftShow = () => move < 0;
+
   return (
-    <CarouselStyle>
+    <CarouselStyle leftShow={leftShow()} rightShow={true}>
       <Left onClick={actionLeft} />
       <WrapperCarousel move={move}>
         {videos.map(({
