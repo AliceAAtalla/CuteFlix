@@ -10,33 +10,55 @@ export const WrapperCarousel = styled.div`
     margin-right: 25rem;
   }
 
-  ${({ moveRight }) => moveRight
-  && css`
-      transform: translateX(calc(var(--thumb-width) * -1))
+  ${({ move }) => css`
+      transform: translateX(calc(var(--thumb-width) * ${move}))
   `}
 `;
 
-export const Right = styled.button`
+const Arrow = css`
   position: absolute;
   height: calc(100% - var(--space-top) * 2);
   width: 50rem;
-  right: 0;
   opacity: 0;
   border: none;
   background-color: var(--color-video-3);
   transition: opacity 200ms linear, transform 200ms linear;
   cursor: pointer;
+  z-index: 1;
 
   &::after {
     content: url(${arrow});
     display: inline-block;
-    transform: rotate(180deg);
     opacity: 1;
     transition: transform 100ms linear;
   }
+`;
+
+export const Right = styled.button`
+  ${Arrow};
+  right: 0;
+
+  &::after {transform: rotate(180deg);}
+
+  &:hover::after {
+    transform: scale(1.2) rotate(180deg);
+  }
 
   &:active::after {
-    transform: rotate(180deg) translateX(4rem);
+    transform: rotate(180deg) scale(1.2) translateX(-4rem);
+  }
+`;
+
+export const Left = styled.button`
+  ${Arrow};
+  left: 0;
+
+  &:hover::after {
+    transform: scale(1.2) ;
+  }
+
+  &:active::after {
+    transform: scale(1.2) translateX(-4rem);
   }
 `;
 
@@ -57,7 +79,7 @@ export const CarouselStyle = styled.div`
     width: var(--thumb-width);
   }
 
-  &:hover > ${Right} {
+  &:hover > ${Right}, &:hover > ${Left} {
     opacity: 0.5;
   }
 
@@ -66,7 +88,7 @@ export const CarouselStyle = styled.div`
     opacity: 0.7;
   }
 
-  & > ${Right}:focus {
+  & > ${Right}:focus, & > ${Left}:focus {
     outline: none;
   }
 `;

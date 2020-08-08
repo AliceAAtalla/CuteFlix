@@ -1,17 +1,24 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import ThumbCute from '../ThumbCute';
-import { CarouselStyle, Right, WrapperCarousel } from './styles';
+import {
+  CarouselStyle, Right, WrapperCarousel, Left,
+} from './styles';
 
 const CarouselCute = ({ videos }) => {
-  const [moveRight, setMoveRight] = useState(false);
+  const [move, setMove] = useState(0);
 
   const actionRight = () => {
-    setMoveRight(true);
+    setMove((prevState) => prevState - 1);
+  };
+
+  const actionLeft = () => {
+    setMove((prevState) => prevState + 1);
   };
 
   return (
     <CarouselStyle>
-      <WrapperCarousel moveRight={moveRight}>
+      <Left onClick={actionLeft} />
+      <WrapperCarousel move={move}>
         {videos.map(({
           src, alt, title, avatar, channelName, timer, link,
         }) => (
