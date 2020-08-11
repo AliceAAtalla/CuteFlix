@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components';
+
+const Colors = createGlobalStyle`
 :root {
   --color-red-light: #E63946;
   --color-blue-dark: #1D3557;
@@ -18,3 +21,6 @@
   /* Error */
   --color-error: #91121D;
 }
+`;
+
+export default Colors;

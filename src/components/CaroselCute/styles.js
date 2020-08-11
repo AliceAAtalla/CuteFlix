@@ -2,17 +2,18 @@ import styled, { css } from 'styled-components';
 import { WrapperThumb, Background } from '../ThumbCute/styles';
 import arrow from '../../assets/img/arrow.svg';
 
+const thumbWidth = 400;
+const spaceRight = 25;
+const spaceRightLeft = 30;
+
 export const WrapperCarousel = styled.div`
+  --space-right: ${spaceRight}rem;
   display: flex;
   transition: transform 200ms linear;
 
   & > ${Background} {
-    margin-right: 25rem;
+    margin-right: var(--space-right);
   }
-
-  ${({ move }) => css`
-      transform: translateX(calc(var(--thumb-width) * ${move}))
-  `}
 `;
 
 const Arrow = css`
@@ -62,9 +63,34 @@ export const Left = styled.button`
   }
 `;
 
+const moveCarousel = (move, moveLastThumb) => {
+  const oneStep = (thumbWidth + spaceRight) * move;
+  const lastStep = (moveLastThumb + spaceRightLeft) * -1;
+  if (oneStep !== 0 && oneStep < lastStep) {
+    return css`
+      & > ${WrapperCarousel} {
+        transform: translateX(${lastStep}px);
+      }
+
+      &:hover > ${Right} {
+        display: none;
+        opacity: 0;
+      }
+    `;
+  }
+  return css`
+    & > ${WrapperCarousel} {
+      transform: translateX(${oneStep}px);
+    }
+  `;
+};
+
+const leftShow = (move) => move < 0;
+
 export const CarouselStyle = styled.div`
   --space-top: 20rem;
-  --thumb-width: 400rem;
+  --thumb-width: ${thumbWidth}rem;
+  --space-right-left: ${spaceRightLeft}rem;
 
   position: relative;
   display: flex;
@@ -72,19 +98,21 @@ export const CarouselStyle = styled.div`
   align-items: center;
   align-self: flex-start;
   width: 100%;
-  padding: var(--space-top) 30rem;
+  padding: var(--space-top) var(--space-right-left);
   overflow: hidden;
 
   & ${WrapperThumb} {
     width: var(--thumb-width);
+    box-sizing: border-box;
   }
 
   &:hover > ${Right} {
+    display: block;
     opacity: 0.5;
   }
 
   &:hover > ${Left} {
-    ${({ leftShow }) => (leftShow
+    ${({ move }) => (leftShow(move)
     ? css`
       display: block;
       opacity: 0.5;
@@ -103,4 +131,6 @@ export const CarouselStyle = styled.div`
   & > ${Right}:focus, & > ${Left}:focus {
     outline: none;
   }
+
+  ${({ move, moveLastThumb }) => moveCarousel(move, moveLastThumb)}
 `;

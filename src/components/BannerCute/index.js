@@ -1,26 +1,29 @@
-import styled from 'styled-components';
-import container from '../../styles/tools/container';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { BannerStyle, Text } from './styles';
 import TagCute from '../TagCute';
 import TitleCute from '../TitleCute';
+import DescriptionCute from '../DescriptionCute';
 
-export const Text = styled.div`
-  padding-top: 10rem;
-  max-width: 45%;
+const BannerCute = ({
+  children, tag, title, description,
+}) => (
+  <BannerStyle>
+    <Text>
+      <TagCute>{tag}</TagCute>
+      <TitleCute>{title}</TitleCute>
+      <DescriptionCute>{description}</DescriptionCute>
+    </Text>
 
-  ${TagCute} {
-    margin-bottom: 35rem;
-  }
+    {children}
+  </BannerStyle>
+);
 
-  ${TitleCute} {
-    margin-bottom: 20rem;
-  }
-`;
+BannerCute.propTypes = {
+  children: PropTypes.element.isRequired,
+  tag: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
-export const BannerCute = styled.section`
-  ${container};
-  display: flex;
-  justify-content: space-between;
-  max-height: 70vh;
-  height: 100vh;
-  align-items: center;
-`;
+export default BannerCute;

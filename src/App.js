@@ -1,9 +1,7 @@
 import React, { Fragment } from 'react';
 import HeaderLogin from './components/HeaderLogin';
-import { BannerCute, Text } from './components/BannerCute';
+import BannerCute from './components/BannerCute';
 import TagCute from './components/TagCute';
-import TitleCute from './components/TitleCute';
-import DescriptionCute from './components/DescriptionCute';
 import ThumbCute from './components/ThumbCute';
 import Footer from './components/FooterCute';
 import SectionCute from './components/SectionCute';
@@ -16,15 +14,12 @@ function App() {
   return (
     <Fragment>
       <HeaderLogin />
-      <BannerCute>
-        <Text>
-          <TagCute>Animais Fofos</TagCute>
-          <TitleCute>Boas vindas a CuteFlix!</TitleCute>
-          <DescriptionCute>
-            Aqui você vai ver vários videos apaixonantes e fofos! Se derreta com
-            Cachorinhos, Gatinhos, Passarinhos, Pandas, e muitas outras fofuras!
-          </DescriptionCute>
-        </Text>
+      <BannerCute
+        tag="Animais Fofos"
+        title="Boas vindas a CuteFlix!"
+        description="Aqui você vai ver vários videos apaixonantes e fofos! Se derreta com
+        Cachorinhos, Gatinhos, Passarinhos, Pandas, e muitas outras fofuras!"
+      >
         <ThumbCute
           src={Cachorrinho}
           alt="Bem vindos a CuteFlix!"

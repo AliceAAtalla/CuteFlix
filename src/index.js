@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import './styles/settings/colors.css';
-import './styles/reset.css';
+import Reset from './styles/Reset';
 import App from './App';
 import Video from './pages/Video';
+import Colors from './styles/settings/colors';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Reset />
+    <Colors />
+
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={App} />
