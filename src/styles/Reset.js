@@ -148,6 +148,10 @@ body {
   min-width: 320px;
   height: 100vh;
 }
+
+#root {
+  height: 100%;
+}
 `;
 
 export default Reset;

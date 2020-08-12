@@ -59,6 +59,7 @@ export const Background = styled.div`
   --transition: transform 200ms linear, opacity 100ms linear;
   --transition-hover: transform 350ms 200ms linear, opacity 300ms 200ms linear;
   /* -------- */
+  display: inline-block;
   background-color: var(--color-video-3);
   position: relative;
 
