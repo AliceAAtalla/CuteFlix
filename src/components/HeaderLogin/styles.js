@@ -24,12 +24,15 @@ export const Wrapper = styled.div`
     }
 
     & > ${ButtonCute} {
+      box-sizing: border-box;
+      width: 100vw;
       position: fixed;
       bottom: 0;
       left: 0;
-      width: 100vw;
       border: none;
       border-radius: 0;
+      box-shadow: inset 0px 1px 10px 1px var(--color-video-1);
+      z-index: 10;
     }
   }
 `;

@@ -12,7 +12,8 @@ const FooterCute = styled.footer`
   box-shadow: inset 0px 4px 30px 2px var(--color-green-blue);
 
   & > ${LogoCute} {
-    margin-bottom: 20rem;
+    margin-bottom: 20rem;7
+    height: 80rem;
   }
 `;
 

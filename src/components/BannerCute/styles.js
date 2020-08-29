@@ -9,11 +9,11 @@ export const Text = styled.div`
   padding-top: 10rem;
   max-width: 45%;
 
-  ${TagCute} {
+  & > ${TagCute} {
     margin-bottom: 35rem;
   }
 
-  ${TitleCute} {
+  & > ${TitleCute} {
     margin-bottom: 20rem;
   }
 
@@ -32,24 +32,38 @@ export const Text = styled.div`
       display: none;
     }
   }
+
+  @media (max-width: 500px) {
+    & > ${TagCute} {
+      width: 55vw;
+      font-size: 20rem;
+    }
+  }
 `;
 
 export const BannerStyle = styled.section`
   ${container};
   display: flex;
   justify-content: space-between;
-  max-height: 70vh;
-  height: 100vh;
+  box-sizing: border-box;
   align-items: center;
+  height: auto;
+  margin: 30rem;
 
   @media (max-width: 1100px) {
     flex-direction: column;
     justify-content: flex-start;
-    margin-bottom: 50rem;
-    max-height: 55vh;
+    margin-bottom: 60rem;
+    max-height: 80vh;
 
     & ${WrapperThumb} {
-      width: 500px;
+      width: 650px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    & ${WrapperThumb} {
+      width: 80vw;
     }
   }
 `;

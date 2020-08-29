@@ -9,6 +9,10 @@ import Cachorrinho from './assets/img/Chorrinho1.jpg';
 import channel1 from './assets/img/Channel.jpg';
 import CarouselCute from './components/CaroselCute';
 import videosDogs from './services/videosDogs';
+import videosCats from './services/videosCats';
+import videosFoxs from './services/videosFoxs';
+import videosPandas from './services/videosPandas';
+import videosBirds from './services/videosBirds';
 
 function App() {
   return (
@@ -32,6 +36,14 @@ function App() {
       <SectionCute>
         <TagCute>Cachorrinho</TagCute>
         <CarouselCute videos={videosDogs} />
+        <TagCute>Gatinhos</TagCute>
+        <CarouselCute videos={videosCats} />
+        <TagCute>Passarinhos</TagCute>
+        <CarouselCute videos={videosBirds} />
+        <TagCute>Raposinhas</TagCute>
+        <CarouselCute videos={videosFoxs} />
+        <TagCute>Pandinhas</TagCute>
+        <CarouselCute videos={videosPandas} />
       </SectionCute>
       <Footer />
     </Fragment>

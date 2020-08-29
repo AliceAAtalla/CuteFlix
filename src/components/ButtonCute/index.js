@@ -3,6 +3,10 @@ import styled from 'styled-components';
 const ButtonCute = styled.button`
   --transition-transform: transform 100ms linear, background-color 200ms linear;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   background-color: var(--color-red-light);
   border: 1px solid var(--color-blue-light);
   border-radius: 4px;
