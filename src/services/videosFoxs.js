@@ -5,7 +5,7 @@ const videosFoxs = [
     alt: 'Homem tira lata de raposinha e a REAÇÃO É LINDA',
     title: 'Homem tira lata de raposinha e a REAÇÃO É LINDA',
     avatar:
-      'https://i.ytimg.com/an/LYfw4eDpyXCL_f-R1rBM6Q/featured_channel.jpg?v=5c13f6ce',
+      'https://yt3.ggpht.com/a-/AOh14GiCV5ZYJBwE36n3vGLJju-vCEI5eQWT98hzOQ=s68-c-k-c0x00ffffff-no-rj-mo',
     channelName: 'Era uma vez...',
     timer: '02:03',
     link: 'https://youtu.be/QBDdQefycuU',

@@ -19,7 +19,7 @@ export const Title = styled.figcaption`
   bottom: var(--space);
   left: var(--space);
   font-weight: 300;
-  font-size: 23rem;
+  font-size: 16rem;
   color: var(--color-video-title);
   padding: var(--border) 6rem;
   transform: translateX(calc(100% + var(--space)));
@@ -118,7 +118,7 @@ export const Background = styled.div`
 
       & > ${Timer} {
         opacity: 1;
-        transition: opacity 300ms 550ms linear;
+        transition: opacity 1600ms 550ms linear;
       }
     }
   }

@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 const TagCute = styled.h2`
   display: inline-block;
   border-radius: 4rem;
-  font-size: 25rem;
+  font-size: 20rem;
   padding: 20rem 18rem;
   color: var(--color-light);
 
