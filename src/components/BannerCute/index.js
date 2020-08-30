@@ -5,12 +5,10 @@ import TagCute from '../TagCute';
 import TitleCute from '../TitleCute';
 import DescriptionCute from '../DescriptionCute';
 
-const BannerCute = ({
-  children, tag, title, description,
-}) => (
+const BannerCute = ({ children, tag, title, description }) => (
   <BannerStyle>
     <Text>
-      <TagCute>{tag}</TagCute>
+      <TagCute title>{tag}</TagCute>
       <TitleCute>{title}</TitleCute>
       <DescriptionCute>{description}</DescriptionCute>
     </Text>

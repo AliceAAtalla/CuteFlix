@@ -39,7 +39,9 @@ export const Right = styled.button`
   ${Arrow};
   right: 0;
 
-  &::after {transform: rotate(180deg);}
+  &::after {
+    transform: rotate(180deg);
+  }
 
   &:hover::after {
     transform: scale(1.2) rotate(180deg);
@@ -55,7 +57,7 @@ export const Left = styled.button`
   left: 0;
 
   &:hover::after {
-    transform: scale(1.2) ;
+    transform: scale(1.2);
   }
 
   &:active::after {
@@ -100,6 +102,7 @@ export const CarouselStyle = styled.div`
   width: 100%;
   padding: var(--space-top) var(--space-right-left);
   overflow: hidden;
+  margin-bottom: 25rem;
 
   & ${WrapperThumb} {
     width: var(--thumb-width);
@@ -112,15 +115,16 @@ export const CarouselStyle = styled.div`
   }
 
   &:hover > ${Left} {
-    ${({ move }) => (leftShow(move)
-    ? css`
-      display: block;
-      opacity: 0.5;
-    `
-    : css`
-      display: none;
-      opacity: 0;
-    `)}
+    ${({ move }) =>
+      leftShow(move)
+        ? css`
+            display: block;
+            opacity: 0.5;
+          `
+        : css`
+            display: none;
+            opacity: 0;
+          `}
   }
 
   & > ${Right}:hover {

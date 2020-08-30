@@ -11,7 +11,6 @@ import CarouselCute from './components/CaroselCute';
 import videosDogs from './services/videosDogs';
 import videosCats from './services/videosCats';
 import videosFoxs from './services/videosFoxs';
-import videosPandas from './services/videosPandas';
 import videosBirds from './services/videosBirds';
 
 function App() {
@@ -34,16 +33,14 @@ function App() {
         />
       </BannerCute>
       <SectionCute>
-        <TagCute>Cachorrinho</TagCute>
+        <TagCute first>Cachorrinho</TagCute>
         <CarouselCute videos={videosDogs} />
-        <TagCute>Gatinhos</TagCute>
+        <TagCute second>Gatinhos</TagCute>
         <CarouselCute videos={videosCats} />
-        <TagCute>Passarinhos</TagCute>
+        <TagCute third>Passarinhos</TagCute>
         <CarouselCute videos={videosBirds} />
-        <TagCute>Raposinhas</TagCute>
+        <TagCute fourth>Raposinhas</TagCute>
         <CarouselCute videos={videosFoxs} />
-        <TagCute>Pandinhas</TagCute>
-        <CarouselCute videos={videosPandas} />
       </SectionCute>
       <Footer />
     </Fragment>
