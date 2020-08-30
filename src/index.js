@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/settings/colors.css';
-import './styles/reset.css';
-import App from './App';
+
+import Reset from './styles/Reset';
+import Colors from './styles/settings/colors';
+import Routes from './Routes';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Reset />
+    <Colors />
+
+    <Routes />
   </React.StrictMode>,
   document.getElementById('root'),
 );
