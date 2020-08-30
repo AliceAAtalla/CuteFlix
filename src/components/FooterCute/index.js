@@ -9,6 +9,10 @@ const Footer = () => (
     <p>
       Site Feito na #ImersãoReact da
       <LinkAlura href="https://www.alura.com.br/"> Alura</LinkAlura>
+      {' por '}
+      <LinkAlura href="https://www.linkedin.com/in/aliceatalla/">
+        Alice Arruda Atalla!
+      </LinkAlura>
     </p>
   </FooterCute>
 );

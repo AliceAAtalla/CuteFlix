@@ -15,6 +15,10 @@ const FooterCute = styled.footer`
     margin-bottom: 20rem;7
     height: 80rem;
   }
+
+  @media (max-width: 880px) {
+    display: none;
+  }
 `;
 
 export default FooterCute;
