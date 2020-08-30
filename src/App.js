@@ -1,43 +1,49 @@
-import React from 'react';
-import LogoCute from './components/LogoCute';
-import { HeaderCute, Wrapper } from './components/HeaderCute';
-import ButtonCute from './components/ButtonCute';
-import FooterCute from './components/FooterCute';
-import LinkAlura from './components/LinkAlura';
-import { BannerCute, Text } from './components/BannerCute';
+import React, { Fragment } from 'react';
+import HeaderLogin from './components/HeaderLogin';
+import BannerCute from './components/BannerCute';
 import TagCute from './components/TagCute';
-import TitleCute from './components/TitleCute';
-import DescriptionCute from './components/DescriptionCute';
 import ThumbCute from './components/ThumbCute';
+import Footer from './components/FooterCute';
+import SectionCute from './components/SectionCute';
 import Cachorrinho from './assets/img/Chorrinho1.jpg';
+import channel1 from './assets/img/Channel.jpg';
+import CarouselCute from './components/CaroselCute';
+import videosDogs from './services/videosDogs';
+import videosCats from './services/videosCats';
+import videosFoxs from './services/videosFoxs';
+import videosBirds from './services/videosBirds';
 
 function App() {
   return (
-    <>
-      <HeaderCute>
-        <Wrapper>
-          <LogoCute />
-          <ButtonCute>Novo Video</ButtonCute>
-        </Wrapper>
-      </HeaderCute>
-      <BannerCute>
-        <Text>
-          <TagCute>Cãozinhos</TagCute>
-          <TitleCute>Tirando Selfie</TitleCute>
-          <DescriptionCute>Cãozinho tirando uma selfie</DescriptionCute>
-        </Text>
-        <ThumbCute src={Cachorrinho} alt="Cachorrinho tirando selfie" 
-        // avatar={}
+    <Fragment>
+      <HeaderLogin />
+      <BannerCute
+        tag="Animais Fofos"
+        title="Boas vindas a CuteFlix!"
+        description="Aqui você vai ver vários videos apaixonantes e fofos! Se derreta com
+        Cachorinhos, Gatinhos, Passarinhos, Pandas, e muitas outras fofuras!"
+      >
+        <ThumbCute
+          src={Cachorrinho}
+          alt="Bem vindos a CuteFlix!"
+          channelName="CuteFlix"
+          avatar={channel1}
+          title="Bem vindos a CuteFlix!"
+          timer="00:00"
         />
       </BannerCute>
-      <FooterCute>
-        <LogoCute />
-        <p>
-          Site Feito na #ImersãoReact da
-          <LinkAlura href="https://www.alura.com.br/"> Alura</LinkAlura>
-        </p>
-      </FooterCute>
-    </>
+      <SectionCute>
+        <TagCute first>Cachorrinho</TagCute>
+        <CarouselCute videos={videosDogs} />
+        <TagCute second>Gatinhos</TagCute>
+        <CarouselCute videos={videosCats} />
+        <TagCute third>Passarinhos</TagCute>
+        <CarouselCute videos={videosBirds} />
+        <TagCute fourth>Raposinhas</TagCute>
+        <CarouselCute videos={videosFoxs} />
+      </SectionCute>
+      <Footer />
+    </Fragment>
   );
 }
 

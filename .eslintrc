@@ -5,22 +5,20 @@
     "no-alert": "off",
     "prefer-arrow-callback": "off",
     "func-names": "off",
+    "react/jsx-fragments": [0, "element"],
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+        "extensions": [".js", ".jsx"]
       }
     ],
     "react/prefer-stateless-function": 0,
     "arrow-parens": [2, "always"],
-    "jsx-a11y/label-has-associated-control": 0
+    "jsx-a11y/label-has-associated-control": 0,
+    "react/jsx-curly-newline": "off"
   },
   "env": {
     "browser": true,
-    "node": true,
-    "jest": true
+    "es6": true
   }
 }

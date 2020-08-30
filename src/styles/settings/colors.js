@@ -1,9 +1,13 @@
+import { createGlobalStyle } from 'styled-components';
+
+const Colors = createGlobalStyle`
 :root {
   --color-red-light: #E63946;
   --color-blue-dark: #1D3557;
   --color-blue-light: #A8DADC;
   --color-light: #F1FAEE;
   --color-green-blue: #457B9D;
+  --color-title-video: #b1aeae9d;
 
   /* Videos */
   --color-video-title: #E1E6E1;
@@ -17,3 +21,6 @@
   /* Error */
   --color-error: #91121D;
 }
+`;
+
+export default Colors;
