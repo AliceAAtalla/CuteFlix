@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react';
-import HeaderLogin from './components/HeaderLogin';
+import HeaderHome from './components/HeaderHome';
 import BannerCute from './components/BannerCute';
 import TagCute from './components/TagCute';
 import ThumbCute from './components/ThumbCute';
 import Footer from './components/FooterCute';
 import SectionCute from './components/SectionCute';
+import CarouselCute from './components/CaroselCute';
+
 import Cachorrinho from './assets/img/Chorrinho1.jpg';
 import channel1 from './assets/img/Channel.jpg';
-import CarouselCute from './components/CaroselCute';
 import videosDogs from './services/videosDogs';
 import videosCats from './services/videosCats';
 import videosFoxs from './services/videosFoxs';
@@ -16,7 +17,7 @@ import videosBirds from './services/videosBirds';
 function App() {
   return (
     <Fragment>
-      <HeaderLogin />
+      <HeaderHome />
       <BannerCute
         tag="Animais Fofos"
         title="Boas vindas a CuteFlix!"

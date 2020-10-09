@@ -3,13 +3,13 @@ import { HeaderCute, Wrapper } from './styles';
 import LogoCute from '../LogoCute';
 import ButtonCute from '../ButtonCute';
 
-function HeaderLogin() {
+function HeaderHome() {
   return (
     <HeaderCute>
       <Wrapper>
         <LogoCute />
 
-        <ButtonCute as="a" href="/video/new">
+        <ButtonCute as="a" href="/login">
           ENTRAR
         </ButtonCute>
       </Wrapper>
@@ -17,4 +17,4 @@ function HeaderLogin() {
   );
 }
 
-export default HeaderLogin;
+export default HeaderHome;
