@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "/CuteFlix/static/js/main.cac31a91.chunk.js",
+    "main.js.map": "/CuteFlix/static/js/main.cac31a91.chunk.js.map",
+    "runtime-main.js": "/CuteFlix/static/js/runtime-main.d21b9deb.js",
+    "runtime-main.js.map": "/CuteFlix/static/js/runtime-main.d21b9deb.js.map",
+    "static/js/2.7e8229a8.chunk.js": "/CuteFlix/static/js/2.7e8229a8.chunk.js",
+    "static/js/2.7e8229a8.chunk.js.map": "/CuteFlix/static/js/2.7e8229a8.chunk.js.map",
+    "index.html": "/CuteFlix/index.html",
+    "precache-manifest.61060f3895d6460c40b55dd51b1c3e2a.js": "/CuteFlix/precache-manifest.61060f3895d6460c40b55dd51b1c3e2a.js",
+    "service-worker.js": "/CuteFlix/service-worker.js",
+    "static/js/2.7e8229a8.chunk.js.LICENSE.txt": "/CuteFlix/static/js/2.7e8229a8.chunk.js.LICENSE.txt",
+    "static/media/Channel.jpg": "/CuteFlix/static/media/Channel.79157aff.jpg",
+    "static/media/Chorrinho1.jpg": "/CuteFlix/static/media/Chorrinho1.3ebcf491.jpg",
+    "static/media/CuteFlix.png": "/CuteFlix/static/media/CuteFlix.8c526935.png",
+    "static/media/arrow.svg": "/CuteFlix/static/media/arrow.27d97c63.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d21b9deb.js",
+    "static/js/2.7e8229a8.chunk.js",
+    "static/js/main.cac31a91.chunk.js"
+  ]
+}
