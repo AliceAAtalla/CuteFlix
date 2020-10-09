@@ -19,7 +19,7 @@ export const Title = styled.figcaption`
   bottom: var(--space);
   left: var(--space);
   font-weight: 300;
-  font-size: 16rem;
+  font-size: 18rem;
   color: var(--color-video-title);
   padding: var(--border) 6rem;
   transform: translateX(calc(100% + var(--space)));
